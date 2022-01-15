@@ -1,7 +1,3 @@
-function test() {
-  console.log(`bla`);
-}
-
 /** https://usefulangle.com/post/352/javascript-capture-image-from-camera
  * 
  */
@@ -41,9 +37,3 @@ click_button.addEventListener("click", async function () {
     console.error(err.name, err.message);
   }
 });
-
-// canvas.toBlob(function(blob) { 
-//     const item = new ClipboardItem({ "image/jpeg": blob });
-//     navigator.clipboard.write([item]); 
-// });
-
