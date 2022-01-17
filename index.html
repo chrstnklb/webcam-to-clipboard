@@ -23,36 +23,37 @@
   <div class="container">
 
     <div class="row">
-      <div class="col text-center" id="start-camera-col">
-        <button id="start-camera" type="button" class="btn btn-success btn-lg">Aktiviere Kamera</button>        
+      <div class="col text-center" id="activate-cam-col">
+        <button id="activate-cam" type="button" class="btn btn-outline-success btn-lg">1. Activate Cam 👆🏽</button>        
       </div>
     </div>
     
     <div class="row">
-      <div class="col text-center" id="video-col">
-        <video id="video" autoplay></video>
+      <div class="col text-center" id="cam-video-col">
+        <video id="cam-video" autoplay></video>
       </div>
     </div>
     
     <div class="row">
-      <div class="col text-center" id="click-photo-col">
-        <button id="click-photo" type="button" class="btn btn-success btn-lg">Kopier Bild in Zwischenablage</button>
+      <div class="col text-center" id="copy-to-clipboard-col">
+        <button id="copy-to-clipboard" type="button" class="btn btn-outline-success btn-lg">2. Copy To Clipboard 👆🏽</button>
       </div>
     </div>
 
     <div class="row">
       <div class="col text-center" id="canvas-col">
-        <canvas id="canvas"></canvas>
+          <canvas id="canvas"></canvas>
       </div>
     </div>
 
     <div class="row">
       <div class="col text-center" id="strg-v-col">
-        <small id="strg-v" type="label">Nun öffne deine App der Wahl und klicke [STRG] + [V]</small>
+        <button type="button" nohover class="btn btn-outline-success btn-lg disabled">3. Open target and use [CTRL] + [V]</button>
       </div>
     </div>
 
 </body>
+
 <script src="./test.js"></script>
 
 </html>

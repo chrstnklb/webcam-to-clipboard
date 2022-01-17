@@ -1,5 +1,10 @@
+html {
+  min-width: 100%;
+}
+
 body {
   background-color: blanchedalmond;
+  min-width: 100%;
 }
 
 button {
@@ -8,13 +13,14 @@ button {
 
 canvas {
   /* margin: 10px; */
-  width: 320;
-  height: 240;
+  width: 120;
+  height: 120;
 }
 
 video {
-  width: 320;
-  height: 240;
+  width: 640;
+  height: 480;
+  border-radius: 32px;
 }
 
 row {
@@ -22,13 +28,13 @@ row {
 }
 
 /* 
-#start-camera-col {
+#activate-cam-col {
   background-color: rgba(200, 50, 230, 0.5);
 }
 #video-col {
   background-color: rgba(150, 100, 230, 0.5);
 }
-#click-photo-col {
+#copy-to-clipboard-col {
   background-color: rgba(100, 150, 230, 0.5);
 }
 #canvas-col {
