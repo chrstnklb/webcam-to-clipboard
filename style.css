@@ -11,35 +11,41 @@ button {
   margin: 10px;
 }
 
-canvas {
-  /* margin: 10px; */
-  width: 120;
-  height: 120;
-}
-
 video {
-  width: 640;
-  height: 480;
-  border-radius: 32px;
+  border-radius: 32px 32px 64px 64px;
 }
 
 row {
   width: 100px;
 }
 
-/* 
-#activate-cam-col {
+/* #activate-cam-col {
   background-color: rgba(200, 50, 230, 0.5);
 }
+
 #video-col {
   background-color: rgba(150, 100, 230, 0.5);
 }
+
 #copy-to-clipboard-col {
   background-color: rgba(100, 150, 230, 0.5);
 }
+
 #canvas-col {
   background-color: rgba(50, 200, 230, 0.5);
-}
+} 
+
 #strg-v-col{
-    background-color: rgba(00, 250, 230, 0.5);
-} */
+  background-color: rgba(00, 250, 230, 0.5);
+}
+*/
+
+#canvas-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 120px;
+  height: 120px;
+  /* background-color: rgba(77, 50, 230, 0.5); */
+}
+

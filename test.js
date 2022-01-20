@@ -2,6 +2,7 @@ let cameraButton = document.querySelector("#activate-cam");
 let camVideo = document.querySelector("#cam-video");
 let copyCamVideoToClipboard = document.querySelector("#copy-to-clipboard");
 let canvas = document.querySelector("#canvas");
+let smallSide;
 
 let camWidth, camHeight;
 
@@ -20,26 +21,29 @@ cameraButton.addEventListener("click", async function () {
   console.log("camWidth :>> ", camWidth);
   console.log("camHeight :>> ", camHeight);
 
+  camVideo.setAttribute("width", "80%");
   camVideo.srcObject = stream;
 });
 
+function smallestSide() {
+  smallSide = camWidth > camHeight ? camHeight : camWidth;
+}
+
 copyCamVideoToClipboard.addEventListener("click", async function () {
+  smallestSide();
   canvas
     .getContext("2d")
-    // .drawImage(image,   dx, dy, dWidth,       dHeight);
-    // .drawImage(camVideo, 0,  0, canvas.width, canvas.height);
     .drawImage(
       camVideo,
-      0,
-      0,
-      camWidth,
-      camHeight,
+      camWidth / 2 - smallSide / 2,
+      camHeight / 2 - smallSide / 2,
+      smallSide,
+      smallSide,
       0,
       0,
       120,
       120
     );
-  // .drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
 
   let imageDataUrl = canvas.toDataURL("image/png");
 
