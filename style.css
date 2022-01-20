@@ -23,7 +23,5 @@ row {
 
 canvas{
   border-radius: 8px 8px 8px 8px;
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
 }
 

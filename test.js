@@ -13,7 +13,6 @@ cameraButton.addEventListener("click", async function () {
   });
 
   let stream_settings = stream.getVideoTracks()[0].getSettings();
-
   // actual width & height of the camera video
   camWidth = stream_settings.width;
   camHeight = stream_settings.height;
@@ -23,31 +22,36 @@ cameraButton.addEventListener("click", async function () {
 
   camVideo.setAttribute("width", "320px");
   camVideo.srcObject = stream;
+
+  flipCanvas();
 });
 
-function smallestSide() {
+function flipCanvas() {
+  let ctx = canvas.getContext("2d");
+  ctx.translate(120, 0);
+  ctx.scale(-1, 1);
+}
+
+function findSmallestSide() {
   smallSide = camWidth > camHeight ? camHeight : camWidth;
 }
 
 copyCamVideoToClipboard.addEventListener("click", async function () {
-  smallestSide();
+  drawCanvas();
+  copyToClipboard();
+});
 
-  let startX = camWidth / 2 - smallSide / 2
+function drawCanvas() {
+  findSmallestSide();
+
+  let startX = camWidth / 2 - smallSide / 2;
 
   canvas
     .getContext("2d")
-    .drawImage(
-      camVideo,
-      startX,
-      0,
-      smallSide,
-      smallSide,
-      0,
-      0,
-      120,
-      120
-    );
+    .drawImage(camVideo, startX, 0, smallSide, smallSide, 0, 0, 120, 120);
+}
 
+async function copyToClipboard() {
   let imageDataUrl = canvas.toDataURL("image/png");
 
   try {
@@ -63,4 +67,4 @@ copyCamVideoToClipboard.addEventListener("click", async function () {
   } catch (err) {
     console.error(err.name, err.message);
   }
-});
+}
