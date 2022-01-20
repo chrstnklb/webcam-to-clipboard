@@ -21,7 +21,7 @@ cameraButton.addEventListener("click", async function () {
   console.log("camWidth :>> ", camWidth);
   console.log("camHeight :>> ", camHeight);
 
-  camVideo.setAttribute("width", "80%");
+  camVideo.setAttribute("width", "320px");
   camVideo.srcObject = stream;
 });
 
@@ -31,12 +31,15 @@ function smallestSide() {
 
 copyCamVideoToClipboard.addEventListener("click", async function () {
   smallestSide();
+
+  let startX = camWidth / 2 - smallSide / 2
+
   canvas
     .getContext("2d")
     .drawImage(
       camVideo,
-      camWidth / 2 - smallSide / 2,
-      camHeight / 2 - smallSide / 2,
+      startX,
+      0,
       smallSide,
       smallSide,
       0,
