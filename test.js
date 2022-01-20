@@ -39,6 +39,11 @@ function findSmallestSide() {
 copyCamVideoToClipboard.addEventListener("click", async function () {
   drawCanvas();
   copyToClipboard();
+  confetti({
+    particleCount: 100,
+    startVelocity: 30,
+    spread: 360,
+  });
 });
 
 function drawCanvas() {
