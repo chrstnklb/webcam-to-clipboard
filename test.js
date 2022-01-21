@@ -40,8 +40,12 @@ copyCamVideoToClipboard.addEventListener("click", async function () {
   drawCanvas();
   copyToClipboard();
   confetti({
+    origin: {
+      x:0.5,
+      y:0.45,
+    },
     particleCount: 100,
-    startVelocity: 30,
+    startVelocity: 10,
     spread: 360,
   });
 });
