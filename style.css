@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-color: blanchedalmond;
+  background-color: rgb(238, 238, 238);
   min-width: 100%;
 }
 
@@ -25,3 +25,16 @@ canvas{
   border-radius: 8px 8px 8px 8px;
 }
 
+footer{
+  background-color: aquamarine;
+}
+
+header{
+  background-color: rgb(54, 172, 38);
+  text-align: center;
+  margin: 8px 8px 32px 8px;
+}
+
+nav{
+  border-radius: 5px;
+}
