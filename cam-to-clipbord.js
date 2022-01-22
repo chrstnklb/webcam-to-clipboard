@@ -1,6 +1,6 @@
-let cameraButton = document.querySelector("#activate-cam");
+let cameraButton = document.querySelector("#activate-button");
 let camVideo = document.querySelector("#cam-video");
-let copyCamVideoToClipboard = document.querySelector("#copy-to-clipboard");
+let copyCamVideoToClipboard = document.querySelector("#copy-button");
 let canvas = document.querySelector("#canvas");
 let smallSide;
 
@@ -39,15 +39,7 @@ function findSmallestSide() {
 copyCamVideoToClipboard.addEventListener("click", async function () {
   drawCanvas();
   copyToClipboard();
-  confetti({
-    origin: {
-      x:0.5,
-      y:0.45,
-    },
-    particleCount: 100,
-    startVelocity: 10,
-    spread: 360,
-  });
+  throwConfetti();
 });
 
 function drawCanvas() {

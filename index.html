@@ -23,50 +23,59 @@
     <title>Webcam to Clipboard</title>
   </head>
 
-  <body>
+  <body">
     <header>
-      <nav class="nav justify-content-center" style="background-color: #198754;">
-        <!-- <div
-          class="btn-group btn-group-sm"
-          role="group"
-          aria-label="Basic outlined example"
-        > -->
-          <!-- Button trigger modal -->
-          <button
-            type="button"
-            class="btn btn-outline-light btn-sm"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-          >
-            Wozu?
-          </button>
+      <nav class="nav justify-content-center" style="background-color: #198754">
+        <!-- Button trigger modal -->
+        <button
+          class="btn btn-outline-light btn-sm"
+          data-bs-target="#whyModal"
+          data-bs-toggle="modal"
+          id="why-button"
+          type="button"
+        >
+          Why
+        </button>
 
-          <!-- Button trigger modal -->
-          <button
-            type="button"
-            class="btn btn-outline-light btn-sm"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal2"
-          >
-            Sicherheit?
-          </button>
+        <!-- Button trigger modal -->
+        <button
+          class="btn btn-outline-light btn-sm"
+          data-bs-target="#securtiyModal"
+          data-bs-toggle="modal"
+          id="securtiy-button"
+          type="button"
+        >
+          Security
+        </button>
+        <!-- Button trigger modal -->
+        <button
+          class="btn btn-outline-light btn-sm"
+          data-bs-target="#imprintModal"
+          data-bs-toggle="modal"
+          type="button"
+          id="imprint-button"
+        >
+          Imprint
+        </button>
+        
+        <!-- Button trigger modal -->
+        <button
+          class="btn btn-outline-light btn-sm"
+          data-bs-target="#settingsModel"
+          data-bs-toggle="modal"
+          type="button"
+          id="settings-button"
+        >
+          Settings
+        </button>
+        
 
-          <!-- Button trigger modal -->
-          <button
-            type="button"
-            class="btn btn-outline-light btn-sm"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal3"
-          >
-            Impressum
-          </button>
-        <!-- </div> -->
       </nav>
 
       <!-- Modal -->
       <div
         class="modal fade"
-        id="exampleModal"
+        id="whyModal"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
@@ -75,7 +84,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">
-                Was tut diese Anwendung?
+                What does this page do?
               </h5>
               <button
                 type="button"
@@ -87,15 +96,15 @@
             <div class="modal-body">
               <div>
                 <strong
-                  >Die Anwendung legt Aufnahmen deiner Kamera direkt in deine
-                  Zwischenablage!</strong
+                  >This app puts footage from your camera right into your
+                  clipboard!</strong
                 >
-                <br /><br />Es ist kein Umweg mittels <br />"Datei speichern
-                unter" -> "Datei finden" -> "Datei kopieren" <br />mehr nötig
-                <br /><br />1. Erlaube der Anwendung die Nutzung deiner Kamera
-                <br />2. Positioniere das Motiv und Kopiere das Kamerabild in
-                deine Zwischenablage <br />3. Wechsle in deine Zielanwendung und
-                klicke [STRG] + [V]
+
+                <br /><br />No more annpying <br />"Save file
+                to ..." -> "Find file" -> "Copy file"<br />
+                <br />1. Allow the application to use your camera
+                <br />2. Copy the camera image into your clipboard
+                <br />3. Switch to your target application and hit [CTRL] + [V]
               </div>
             </div>
           </div>
@@ -105,7 +114,7 @@
       <!-- Modal -->
       <div
         class="modal fade"
-        id="exampleModal2"
+        id="securtiyModal"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
@@ -114,7 +123,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">
-                Sind meine Daten sicher?
+                Is it secure?
               </h5>
               <button
                 type="button"
@@ -126,17 +135,15 @@
             <div class="modal-body">
               <div>
                 <strong
-                  >Alles findet ausschliesslich auf deinem Rechner
-                  statt!</strong
+                  >Everything happens on your machine!</strong
                 >
                 <br />
-                <br />Es werden keinerlei Daten zu einem Server gesendet!
-                <br />Das Kamerabild bleibt auf deinem Rechner und in deinem
-                Browser! <br />Die Inhalte deiner Zwischenablage verbleiben im
-                Arbeitsspeicher deines Rechners!
+                <br />No data is send to a server!
+                <br />The camera picture stays on your machine and in your browser
+                <br />Your clipboard content stays inside the RAM of your machine
                 <br />
-                <br />Falls du noch immmer unsicher bist, kannst du den code
-                prüfen auf:
+                <br />If you are still unsure, you can check the code here:
+                <br />
                 <a href="https://wwww.github.com/chrstnklb/webcam-to-clipboard">
                   https://wwww.github.com/chrstnklb/webcam-to-clipboard
                 </a>
@@ -149,7 +156,7 @@
       <!-- Modal -->
       <div
         class="modal fade"
-        id="exampleModal3"
+        id="imprintModal"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
@@ -157,9 +164,34 @@
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">
-                Impressum
-              </h5>
+              <h5 class="modal-title" id="exampleModalLabel">Imprint</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div>Later, the german imprint will stay here.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="settingsModel"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Settings</h5>
               <button
                 type="button"
                 class="btn-close"
@@ -169,7 +201,11 @@
             </div>
             <div class="modal-body">
               <div>
-                Hier kommt das Impressum hin
+
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="confettiSwitch">
+                  <label class="form-check-label" for="confettiSwitch">🎉 Throw confetti</label>
+                </div>
               </div>
             </div>
           </div>
@@ -179,13 +215,13 @@
 
     <div class="container">
       <div class="row">
-        <div class="col text-center" id="activate-cam-col">
+        <div class="col text-center" id="activate-button-col">
           <button
-            id="activate-cam"
+            id="activate-button"
             type="button"
             class="btn btn-outline-success btn-lg"
           >
-            1. Aktiviere Kamera 👆🏽
+            1. Activate Cam
           </button>
         </div>
       </div>
@@ -197,13 +233,13 @@
       </div>
 
       <div class="row">
-        <div class="col text-center" id="copy-to-clipboard-col">
+        <div class="col text-center" id="copy-button-col">
           <button
-            id="copy-to-clipboard"
+            id="copy-button"
             type="button"
             class="btn btn-outline-success btn-lg"
           >
-            2. Kopiere in Zwischenablage 👆🏽
+            2. Copy To Clipboard
           </button>
         </div>
       </div>
@@ -217,17 +253,18 @@
       <div class="row">
         <div class="col text-center" id="strg-v-col">
           <button
-            type="button"
-            nohover
             class="btn btn-outline-success btn-lg disabled"
+            id="paste-hint-button"
+            nohover
+            type="button"
           >
-            3. Öffne App und nutze [STRG] + [V]
+            3. Open Application And Hit [STRG] + [V]
           </button>
         </div>
       </div>
     </div>
-
   </body>
 
-  <script src="./test.js"></script>
+  <script src="./cam-to-clipbord.js"></script>
+  <script src="./confetti.js"></script>
 </html>
