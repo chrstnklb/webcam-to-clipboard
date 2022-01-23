@@ -1,7 +1,7 @@
 let copyCamVideoToClipboard = document.querySelector("#copy-button");
 let canvas = document.querySelector("#canvas");
 
-async function copyToClipboard(canvas) {
+async function copyToClipboard() {
     let imageDataUrl = canvas.toDataURL("image/png");
   
     try {
@@ -21,6 +21,6 @@ async function copyToClipboard(canvas) {
 
   copyCamVideoToClipboard.addEventListener("click", async function () {
     drawCanvas();
-    copyToClipboard(canvas);
+    copyToClipboard();
     throwConfetti();
   });

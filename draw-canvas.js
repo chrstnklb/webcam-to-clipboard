@@ -12,8 +12,6 @@ function drawCanvas() {
 
 let smallSide;
 
-let camWidth, camHeight;
-
 function findSmallestSide() {
   smallSide = camWidth > camHeight ? camHeight : camWidth;
 }
