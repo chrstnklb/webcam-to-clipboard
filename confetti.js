@@ -1,6 +1,16 @@
+let confettiSwitch = document.querySelector("#confettiSwitch");
+
 let localStorageFieldConfetti = "allowConfetti";
 
-let confettiSwitch = document.querySelector("#confettiSwitch");
+// set confetti true on the first time the page is loaded and the localStorage is empty
+console.log(localStorage.getItem(localStorageFieldConfetti));
+localStorage.setItem(
+  localStorageFieldConfetti,
+  localStorage.getItem(localStorageFieldConfetti) !== "false" // true when (true or null)
+);
+
+// load confetti when page is loaded again
+confettiSwitch.checked = confettIsAllowed();
 
 confettiSwitch.addEventListener("change", async function () {
   localStorage.setItem(localStorageFieldConfetti, this.checked);
@@ -21,5 +31,5 @@ function throwConfetti() {
 }
 
 function confettIsAllowed() {
-  return localStorage.getItem(localStorageFieldConfetti) === 'true';
+  return localStorage.getItem(localStorageFieldConfetti) === "true";
 }
