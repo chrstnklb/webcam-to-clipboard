@@ -3,7 +3,7 @@ let confettiSwitch = document.querySelector("#confettiSwitch");
 let localStorageFieldConfetti = "allowConfetti";
 
 // set confetti true on the first time the page is loaded and the localStorage is empty
-console.log(localStorage.getItem(localStorageFieldConfetti));
+console.log(`Confetti is ${localStorage.getItem(localStorageFieldConfetti) ? "allowed" : "not allowed"}`);
 localStorage.setItem(
   localStorageFieldConfetti,
   localStorage.getItem(localStorageFieldConfetti) !== "false" // true when (true or null)

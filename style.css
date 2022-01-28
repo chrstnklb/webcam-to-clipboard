@@ -32,10 +32,14 @@ footer {
 header {
   background-color: rgb(54, 172, 38);
   text-align: center;
-  margin: 8px 8px 32px 8px;
+  margin: 8px 8px 16px 8px;
   border-radius: 8px;
 }
 
 nav {
   border-radius: 8px;
+}
+
+#cam-video{
+  width: 360px;
 }
