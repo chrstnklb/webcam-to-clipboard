@@ -1,0 +1,24 @@
+{
+  "name": "webcam-to-clipboard",
+  "version": "1.0.0",
+  "description": "Catches picture from a cam and puts it into the clipboard.",
+  "main": "copy-to-clipboard.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrstnklb/webcam-to-clipboard.git"
+  },
+  "keywords": [
+    "webcam",
+    "cam",
+    "clipboard"
+  ],
+  "author": "Christian Kliebe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrstnklb/webcam-to-clipboard/issues"
+  },
+  "homepage": "https://github.com/chrstnklb/webcam-to-clipboard#readme"
+}
